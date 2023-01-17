@@ -1,0 +1,68 @@
+body {
+    background: black;
+    background-image: url("./background-start.png");
+    background-repeat: no-repeat;
+}
+h1 {
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:45px;
+}
+ul {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+    color:white;
+    text-decoration:none;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+
+div .s{
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  color:yellow;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:45px;
+}
+
+div .s:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+div .s:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+div .s:last-of-type span {
+  animation: slidein 7s infinite;
+  color:yellow;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    60% {opacity:1;}
+    100% {opacity:0;width:500px;}
+}
